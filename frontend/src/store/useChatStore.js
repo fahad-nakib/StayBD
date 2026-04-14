@@ -22,7 +22,7 @@ async function getSocket() {
 
   socketInstance = io(
     import.meta.env.VITE_API_URL?.replace("/api", "") ||
-      "http://localhost:5000",
+      "https://staybd-dmhf.onrender.com",
     {
       auth: { token },
       transports: ["websocket"],

@@ -4,7 +4,7 @@ import { auth } from "./firebase";
 import { useAuthStore } from "../store/useAuthStore";
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || "http://localhost:5000/api",
+  baseURL: import.meta.env.VITE_API_URL || "https://staybd-dmhf.onrender.com/api",
 });
 
 //  REQUEST INTERCEPTOR (Firebase Auth)

@@ -238,7 +238,7 @@ export const ROLES = {
 
 //  API Base URL
 export const API_BASE_URL =
-  import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+  import.meta.env.VITE_API_URL || "https://staybd-dmhf.onrender.com/api";
 
 //  Formatting Helpers
 export const formatCurrency = (amount) =>

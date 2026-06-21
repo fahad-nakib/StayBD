@@ -129,7 +129,7 @@ export const createCheckoutSession = async (bookingId, guestId) => {
   const payeeId = rawPayee?.toString() ?? "";
 
   if (!payeeId) {
-    console.warn(`⚠️  Could not resolve payeeId for booking ${bookingId}`);
+    console.warn(` Could not resolve payeeId for booking ${bookingId}`);
   }
 
   const session = await stripe.checkout.sessions.create({

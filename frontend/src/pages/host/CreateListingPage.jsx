@@ -547,7 +547,7 @@ export default function CreateListingPage() {
             disabled={loading}
             className="px-8 py-3 bg-emerald-600 text-white rounded-xl hover:bg-emerald-700 disabled:opacity-50 transition font-bold flex items-center gap-2"
           >
-            {loading ? "Submitting..." : "🚀 Submit for Approval"}
+            {loading ? "Submitting..." : "Submit for Approval"}
           </button>
         )}
       </div>

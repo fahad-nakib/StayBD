@@ -1,16 +1,16 @@
-# 🏡 StayBD — Full Stack Rental & Service Marketplace
+# StayBD — Full Stack Rental & Service Marketplace
 
 <p align="center">
   <b>A multi-role, full-stack platform inspired by modern booking systems like Airbnb — tailored for Bangladesh.</b>
 </p>
 
 <p align="center">
-  🚀 Properties • 🎯 Experiences • 🛠 Services • 💳 Payments • 💬 Real-time Chat • 📊 Analytics
+  Properties • Experiences • Services • Payments • Real-time Chat • Analytics
 </p>
 
 ---
 
-## 📌 Overview
+## Overview
 
 **StayBD** is a scalable full-stack web application that enables users to explore, book, and manage **properties, services, and experiences** in a unified platform.
 
@@ -24,9 +24,9 @@ Unlike basic CRUD apps, StayBD implements:
 
 ---
 
-## ✨ Key Features
+## Key Features
 
-### 👤 Role-Based System
+### Role-Based System
 
 | Role                 | Capabilities                      |
 | -------------------- | --------------------------------- |
@@ -37,22 +37,22 @@ Unlike basic CRUD apps, StayBD implements:
 
 ---
 
-### 🧩 Core Functionalities
+### Core Functionalities
 
-- 🏠 Property listing & booking system
-- 🎯 Experience & service marketplace
-- 💬 Real-time chat (Socket.IO)
-- 💳 Stripe payment integration
-- 🗺️ Map-based search (Leaflet)
-- ⭐ Review & rating system
-- ❤️ Wishlist system
-- 📊 Role-based analytics dashboards
-- 🔐 Authentication & authorization system
-- 📦 Basic recommendation engine
+-  Property listing & booking system
+-  Experience & service marketplace
+-  Real-time chat (Socket.IO)
+-  Stripe payment integration
+-  Map-based search (Leaflet)
+-  Review & rating system
+-  Wishlist system
+-  Role-based analytics dashboards
+-  Authentication & authorization system
+-  Basic recommendation engine
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 ```
 Frontend (React + Vite)
@@ -68,9 +68,9 @@ DB   Services   Realtime
 
 ---
 
-## 🧠 Tech Stack
+## Tech Stack
 
-### 🎨 Frontend
+### Frontend
 
 - React (Vite)
 - Tailwind CSS
@@ -83,7 +83,7 @@ DB   Services   Realtime
 
 ---
 
-### ⚙️ Backend
+### Backend
 
 - Node.js + Express
 - MongoDB + Mongoose
@@ -96,7 +96,7 @@ DB   Services   Realtime
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 StayBD/
@@ -126,9 +126,9 @@ StayBD/
 
 ---
 
-## ⚙️ Setup Instructions
+## Setup Instructions
 
-### 🔽 Clone Repository
+### Clone Repository
 
 ```bash
 git clone https://github.com/your-username/staybd.git
@@ -137,9 +137,9 @@ cd staybd
 
 ---
 
-## 🔐 Environment Variables
+## Environment Variables
 
-### 🌐 Frontend (`frontend/.env`)
+### Frontend (`frontend/.env`)
 
 ```env
 # Firebase (Client)
@@ -159,7 +159,7 @@ VITE_STRIPE_PUBLISHABLE_KEY=********
 
 ---
 
-### ⚙️ Backend (`backend/.env`)
+### Backend (`backend/.env`)
 
 ```env
 # Server
@@ -189,20 +189,20 @@ STRIPE_WEBHOOK_SECRET=********
 
 # Cloudinary
 CLOUDINARY_CLOUD_NAME=********
-CLOUDINARY_API_KEY=********
+CLODINARY_API_KEY=********
 CLOUDINARY_API_SECRET=********
 ```
 
 ---
 
-## ▶️ Run the Project
+## Run the Project
 
 ### Backend
 
 ```bash
 cd backend
 npm install
-npm run dev
+npm start
 ```
 
 ---
@@ -217,7 +217,7 @@ npm run dev
 
 ---
 
-## 🌱 Seed Database
+## Seed Database
 
 ```bash
 cd backend
@@ -226,7 +226,7 @@ npm run seed
 
 ---
 
-## 🔌 API Structure
+## API Structure
 
 ```
 /api/users
@@ -243,7 +243,7 @@ npm run seed
 
 ---
 
-## 💬 Real-Time System
+## Real-Time System
 
 - Built with **Socket.IO**
 - Supports:
@@ -253,7 +253,7 @@ npm run seed
 
 ---
 
-## 🔐 Security Features
+## Security Features
 
 - Firebase Authentication
 - Role-based access control
@@ -263,7 +263,7 @@ npm run seed
 
 ---
 
-## 📊 Analytics
+## Analytics
 
 - Booking trends
 - Revenue insights
@@ -272,7 +272,7 @@ npm run seed
 
 ---
 
-## ⚠️ Limitations
+## Limitations
 
 - Recommendation system is rule-based (not ML-driven)
 - No automated testing implemented yet
@@ -280,7 +280,7 @@ npm run seed
 
 ---
 
-## 🚀 Future Improvements
+## Future Improvements
 
 - AI-based recommendation engine
 - Advanced filtering & search
@@ -289,13 +289,13 @@ npm run seed
 
 ---
 
-## 👨‍💻 Author
+## Author
 
-**Md. Jahid Hasan Jitu**
+**Md.Fahad Nakib**
 CSE — Green University of Bangladesh
 
 ---
 
-## 📄 License
+## License
 
 ISC License

@@ -7,7 +7,7 @@ import {
   FiPlus,
   FiEdit2,
   FiEye,
-  FiTrash2, // 🎯 Swapped FiArchive for FiTrash2
+  FiTrash2, // Swapped FiArchive for FiTrash2
   FiMapPin,
   FiStar,
   FiArrowLeft,
@@ -43,7 +43,7 @@ export default function MyServicesPage() {
     fetchServices();
   }, []);
 
-  // 🎯 UPDATED: Handles deletion request instead of direct archive
+  // UPDATED: Handles deletion request instead of direct archive
   const handleDeleteRequest = async (id) => {
     if (
       !window.confirm(
@@ -180,7 +180,7 @@ export default function MyServicesPage() {
                       <FiEdit2 size={14} /> Edit
                     </Link>
 
-                    {/* 🎯 UPDATED: Request Deletion Button with disabled state */}
+                    {/* UPDATED: Request Deletion Button with disabled state */}
                     <button
                       onClick={() => handleDeleteRequest(item._id)}
                       disabled={item.deletionRequested}

@@ -15,6 +15,13 @@ import {
 } from "recharts";
 import { FiArrowLeft, FiPlus } from "react-icons/fi";
 
+import { RiServiceBellLine } from "react-icons/ri";
+import { GrMoney } from "react-icons/gr";
+import { FaRegCalendarAlt } from "react-icons/fa";
+import { FaRegCompass } from "react-icons/fa6";
+
+
+
 // Reusable StatCard
 function StatCard({ title, value, icon, color, sub }) {
   return (
@@ -110,19 +117,19 @@ export default function ProviderDashboardPage() {
         <StatCard
           title="Total Services"
           value={data?.overview?.totalServices ?? 0}
-          icon="🔧"
+          icon={<RiServiceBellLine />}
           color="bg-blue-50 text-blue-600"
         />
         <StatCard
           title="Total Experiences"
           value={data?.overview?.totalExperiences ?? 0}
-          icon="🎪"
+          icon={<FaRegCompass />}
           color="bg-purple-50 text-purple-600"
         />
         <StatCard
           title="Active Bookings"
           value={data?.overview?.totalBookings ?? 0}
-          icon="📅"
+          icon={<FaRegCalendarAlt />}
           color="bg-green-50 text-green-600"
         />
         <StatCard
@@ -132,7 +139,7 @@ export default function ProviderDashboardPage() {
               ? `৳${Number(data.overview.totalEarnings).toLocaleString()}`
               : "৳0"
           }
-          icon="💰"
+          icon={<GrMoney />}
           color="bg-yellow-50 text-yellow-600"
         />
       </div>
@@ -199,28 +206,28 @@ export default function ProviderDashboardPage() {
             {
               to: "/provider/services",
               label: "Manage Services",
-              icon: "🔧",
+              icon: <RiServiceBellLine />,
               desc: "View & edit your services",
               bg: "bg-blue-50",
             },
             {
               to: "/provider/experiences",
               label: "Manage Experiences",
-              icon: "🎪",
+              icon: <FaRegCompass />,
               desc: "View & edit your experiences",
               bg: "bg-purple-50",
             },
             {
               to: "/provider/bookings",
               label: "Manage Bookings",
-              icon: "📅",
+              icon: <FaRegCalendarAlt />,
               desc: "Approve or decline requests",
               bg: "bg-green-50",
             },
             {
               to: "/provider/analytics",
               label: "Analytics & Earnings",
-              icon: "📊",
+              icon: <GrMoney />,
               desc: "Check your performance",
               bg: "bg-yellow-50",
             },

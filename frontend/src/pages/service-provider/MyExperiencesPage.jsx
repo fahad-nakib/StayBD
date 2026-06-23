@@ -43,7 +43,7 @@ export default function MyExperiencesPage() {
         fetchedExperiences = res.data;
       }
 
-      // 🎯 THE FIX: Filter out the archived experiences before setting state
+      // THE FIX: Filter out the archived experiences before setting state
       const visibleExperiences = fetchedExperiences.filter(
         (exp) => exp.status !== "archived",
       );

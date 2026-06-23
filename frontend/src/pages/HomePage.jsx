@@ -16,6 +16,13 @@ import { useAuthStore } from "../store/useAuthStore";
 import PropertyCard from "../components/property/PropertyCard";
 import { ALL_DISTRICTS, RENTAL_TYPES } from "../utils/bdLocations";
 
+import { MdOutlineHouse } from "react-icons/md";
+import { RiServiceBellLine } from "react-icons/ri";
+import { FaBuilding } from "react-icons/fa";
+import { BsCompass } from "react-icons/bs";
+import { PiParkDuotone } from "react-icons/pi";
+
+
 // ─── ICONS ─────────────────────────────────────────────────────────────────────
 const StarIcon = () => (
   <svg
@@ -109,7 +116,7 @@ const TYPE_CONFIG = {
   },
   service: {
     accent: "#d97706",
-    tag: "🛎️",
+    tag: "<RiServiceBellLine />",
     label: "Service",
     getPrice: (i) => (i.price ? `৳${i.price.toLocaleString()}` : null),
     getExtra: (i) => i.category || null,
@@ -775,7 +782,7 @@ const HomePage = () => {
         <div style={{ display: "flex", flexDirection: "column", gap: 48 }}>
           <FeaturedSection
             title="Top Properties"
-            icon="🏠"
+            icon={<FaBuilding />}
             viewAllPath="/properties"
             items={sliderData.properties}
             type="property"
@@ -783,7 +790,7 @@ const HomePage = () => {
           />
           <FeaturedSection
             title="Popular Services"
-            icon="🛎️"
+            icon={<RiServiceBellLine />}
             viewAllPath="/services"
             items={sliderData.services}
             type="service"
@@ -791,7 +798,7 @@ const HomePage = () => {
           />
           <FeaturedSection
             title="Trending Experiences"
-            icon="✨"
+            icon={<BsCompass />}
             viewAllPath="/experiences"
             items={sliderData.experiences}
             type="experience"
@@ -859,18 +866,18 @@ const HomePage = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {[
             {
-              icon: "🏠",
+              icon: <MdOutlineHouse className="w-12 h-12" />,
               label: "Short Term",
               link: "/search?rentalType=short_term",
             },
             {
-              icon: "🏢",
+              icon: <FaBuilding className="w-12 h-12" />,
               label: "Monthly Stay",
               link: "/search?rentalType=long_term",
             },
-            { icon: "✨", label: "Featured", link: "/search?sort=popular" },
+            { icon: <BsCompass className="w-12 h-12" />, label: "Featured", link: "/search?sort=popular" },
             {
-              icon: "🌿",
+              icon: <PiParkDuotone className="w-12 h-12" />,
               label: "Resorts",
               link: "/search?propertyType=resort",
             },
@@ -878,12 +885,12 @@ const HomePage = () => {
             <button
               key={label}
               onClick={() => navigate(link)}
-              className="flex flex-col items-center p-8 bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all group"
+              className="flex flex-col items-center p-8 bg-emerald-600 rounded-2xl border border-emerald-700 shadow-sm hover:shadow-xl hover:bg-emerald-700 hover:-translate-y-1 transition-all group"
             >
-              <span className="text-5xl mb-4 group-hover:scale-110 transition-transform">
+              <span className="text-5xl mb-4 text-white group-hover:scale-110 transition-transform">
                 {icon}
               </span>
-              <span className="font-bold text-gray-800 group-hover:text-emerald-600">
+              <span className="font-bold text-emerald-50 group-hover:text-white transition-colors">
                 {label}
               </span>
             </button>

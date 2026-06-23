@@ -1,7 +1,7 @@
 // src/pages/PropertyListPage.jsx
 import { useState, useEffect, useCallback } from "react";
 import { useSearchParams, Link } from "react-router-dom";
-import { propertyAPI } from "../services/api"; // ✅ Updated import
+import { propertyAPI } from "../services/api"; 
 import PropertyCard from "../components/property/PropertyCard";
 import LoadingSpinner from "../components/common/LoadingSpinner";
 import { ALL_DISTRICTS, PROPERTY_TYPES, AMENITIES } from "../utils/bdLocations";
@@ -39,7 +39,7 @@ export default function PropertyListPage() {
         else if (v) params.set(k, v);
       });
 
-      // ✅ Now using your structured propertyAPI
+      // Now using your structured propertyAPI
       const res = await propertyAPI.getAll(params);
 
       setProperties(res.data.data.properties || res.data.data || []);
@@ -73,7 +73,7 @@ export default function PropertyListPage() {
             to="/"
             className="inline-flex items-center text-sm font-medium text-orange-100 hover:text-white transition mb-2 group"
           >
-            {/* Inline SVG so you don't need to add new imports */}
+            {/* Inline SVG so don't need to add new imports */}
             <svg
               className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform"
               fill="none"

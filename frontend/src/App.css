@@ -112,7 +112,7 @@
     @apply badge bg-gray-100 text-gray-600;
   }
   .badge-orange {
-    @apply badge bg-orange-100 text-orange-700;
+    @apply badge bg-black-100 text-black-700;
   }
 
   /* Loader */
@@ -255,7 +255,7 @@
     @apply bg-blue-50 text-blue-600;
   }
   .badge-orange {
-    @apply bg-orange-50 text-orange-600;
+    @apply bg-black-50 text-black-600;
   }
   .badge-yellow {
     @apply bg-yellow-50 text-yellow-600;

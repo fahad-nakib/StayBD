@@ -270,4 +270,36 @@ export const useBookingStore = create((set, get) => ({
       set({ submitting: false });
     }
   },
+
+  // 💡 শুধুমাত্র এক্সিস্টিং (তৈরি হয়ে যাওয়া) আনপেইড বুকিংয়ের পেমেন্ট করার জন্য নতুন অ্যাকশন
+  handleExistingPayment: async (bookingId) => {
+    if (!bookingId) {
+      toast.error("Invalid Booking ID");
+      return;
+    }
+
+    const { addLog } = get();
+    set({ submitting: true, error: null });
+    addLog(`Initiating payment for existing Booking ID: ${bookingId}...`, "info");
+
+    try {
+      // আপনার ইম্পোর্ট করা সার্ভিস থেকে স্ট্রাইপ সেশন তৈরি করা হচ্ছে
+      addLog(`POST /payments/create-checkout-session...`, "info");
+      const { sessionUrl } = await createCheckoutSession(bookingId);
+      
+      if (sessionUrl) {
+        addLog(`Stripe session ready — redirecting...`, "success");
+        window.location.href = sessionUrl; // সরাসরি স্ট্রাইপ পেজে রিডাইরেক্ট
+      } else {
+        throw new Error("Stripe session URL not found");
+      }
+    } catch (err) {
+      const serverMsg = err.response?.data?.message ?? err.message;
+      addLog(`Payment Error: ${serverMsg}`, "err");
+      set({ error: serverMsg });
+      toast.error(serverMsg || "Payment failed to start. Please try again.");
+    } finally {
+      set({ submitting: false });
+    }
+  },
 }));

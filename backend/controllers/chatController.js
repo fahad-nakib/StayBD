@@ -90,12 +90,12 @@ export const getConversations = asyncHandler(async (req, res) => {
   const userId = req.user._id;
 
   const bookings = await Booking.find({
-    $or: [{ guest: userId }, { host: userId }], // ← removed provider
+    $or: [{ guest: userId }, { host: userId }], 
   })
-    .populate("guest host", "name avatar") // ← removed provider
+    .populate("guest host", "name avatar") 
     .populate("property", "title images")
     .populate("service", "title images")
-    .populate("experience", "title images") // ← added experience
+    .populate("experience", "title images") 
     .sort({ updatedAt: -1 })
     .lean();
 

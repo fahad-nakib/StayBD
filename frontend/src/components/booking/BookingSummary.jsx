@@ -208,25 +208,28 @@ export default function BookingSummary({
                   borderRadius: 12,
                   background:
                     price.valid && !submitting
-                      ? "var(--accent)"
-                      : "var(--border)",
+                      ? "rgb(16 185 129)" // Vibrant Active Emerald Green (Alternative Dark Grey: "rgb(31 41 55)")
+                      : "rgb(5 150 105 / var(--tw-bg-opacity, 1))", 
                   border: "none",
-                  color: price.valid && !submitting ? "#fff" : "var(--muted)",
+                  color: "#fff", 
                   fontFamily: "Syne, sans-serif",
                   fontSize: 15,
                   fontWeight: 700,
-                  cursor:
-                    price.valid && !submitting ? "pointer" : "not-allowed",
-                  transition: "all 0.2s",
+                  cursor: price.valid && !submitting ? "pointer" : "not-allowed",
+                  transition: "all 0.2s ease",
                   letterSpacing: "0.3px",
                 }}
                 onMouseEnter={(e) => {
-                  if (price.valid && !submitting)
-                    e.target.style.background = "var(--accent-hover)";
+                  if (price.valid && !submitting) {
+                    e.target.style.background = "rgb(5 150 105)"; 
+                  }
                 }}
                 onMouseLeave={(e) => {
-                  if (price.valid && !submitting)
-                    e.target.style.background = "var(--accent)";
+                  if (price.valid && !submitting) {
+                    e.target.style.background = "rgb(16 185 129)";
+                  } else {
+                    e.target.style.background = "rgb(5 150 105 / var(--tw-bg-opacity, 1))";
+                  }
                 }}
               >
                 {submitting
@@ -235,6 +238,9 @@ export default function BookingSummary({
                     ? "⚡ Book Instantly"
                     : "📨 Request to Book"}
               </button>
+
+
+
 
               <div
                 style={{
@@ -251,7 +257,7 @@ export default function BookingSummary({
               >
                 {data.instantBooking
                   ? "⚡ Instant confirmation"
-                  : "⏳ Host approval required"}
+                  : "Host approval required"}
               </div>
             </>
           )}
@@ -262,7 +268,7 @@ export default function BookingSummary({
         </div>
       )}
 
-      {/* API Log */}
+      {/* API Log
       <div
         style={{
           marginTop: 20,
@@ -314,7 +320,7 @@ export default function BookingSummary({
             <div style={{ color: "var(--muted)" }}>No requests yet</div>
           )}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

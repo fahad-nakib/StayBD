@@ -177,6 +177,14 @@ function BookingCard({ booking, onCancel }) {
               >
                 Pay Now
               </Link>
+
+              // <button
+              //   onClick={() => handleCompletePayment(booking._id)} // অবশ্যই এভাবে () => দিয়ে পাস করবেন
+              //   disabled={paying}
+              //   className="px-3 py-1.5 bg-emerald-600 text-white text-xs font-bold rounded-lg hover:bg-emerald-700 transition"
+              // >
+              //   {paying ? "⏳..." : "Pay Now"}
+              // </button>
             )}
             <Link
               to={`/bookings/${booking._id}`}
@@ -395,11 +403,10 @@ export default function MyBookingsPage() {
               <button
                 key={tab.key}
                 onClick={() => setActiveTab(tab.key)}
-                className={`shrink-0 flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold transition ${
-                  activeTab === tab.key
-                    ? "bg-emerald-600 text-white shadow-sm"
-                    : "bg-white text-gray-500 border border-gray-200 hover:border-emerald-300 hover:text-emerald-600"
-                }`}
+                className={`shrink-0 flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold transition ${activeTab === tab.key
+                  ? "bg-emerald-600 text-white shadow-sm"
+                  : "bg-white text-gray-500 border border-gray-200 hover:border-emerald-300 hover:text-emerald-600"
+                  }`}
               >
                 {tab.label}
                 {count > 0 && (

@@ -92,6 +92,7 @@ export const searchAPI = {
 
 //  BOOKING API
 export const bookingAPI = {
+  
   bookProperty: (data) => api.post("/bookings/property", data),
   getUserBookings: (params) => api.get("/bookings/my-bookings", { params }),
   getBookingDetails: (id) => api.get(`/bookings/${id}`),
@@ -324,4 +325,6 @@ export async function verifyPayment(sessionId) {
   const res = await api.get(`/payments/verify-session?session_id=${sessionId}`);
   return res.data?.data?.booking ?? res.data;
 }
+
+
 export default api;

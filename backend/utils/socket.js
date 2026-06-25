@@ -42,7 +42,7 @@ export const initializeSocketIO = (server) => {
   //  CONNECTION HANDLER
   io.on("connection", (socket) => {
     const userId = socket.user._id.toString();
-    // console.log(`🔌 Socket connected: ${userId}`);
+    // console.log(`Socket connected: ${userId}`);
 
     if (!userSocketMap.has(userId)) {
       userSocketMap.set(userId, new Set());

@@ -48,9 +48,6 @@ export const verifyPayment = asyncHandler(async (req, res) => {
 /**
  * GET /api/payments/my-transactions
  * Returns transactions for the logged-in user.
- * - As a host/provider:  transactions where they are the payee
- * - As a guest:          transactions where they are the payer
- * Both are included so the same endpoint works for all roles.
  */
 export const getMyTransactions = asyncHandler(async (req, res) => {
   const userId = req.user._id;

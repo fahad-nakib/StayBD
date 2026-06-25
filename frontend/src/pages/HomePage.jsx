@@ -241,7 +241,7 @@ function SliderCard({ item, type, onClick }) {
               backdropFilter: "blur(4px)",
             }}
           >
-            🔥 {item.bookingCount || item.totalBookings}+ booked
+            {item.bookingCount || item.totalBookings}+ booked
           </span>
         )}
       </div>

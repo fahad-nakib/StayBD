@@ -1,8 +1,11 @@
 // backend/controllers/bookingController.js
+import Stripe from "stripe";
 import { Booking } from "../models/Booking.js";
 import { asyncHandler, createError } from "../utils/errorUtils.js";
 import { successResponse } from "../utils/responseUtils.js";
 import * as bookingService from "../services/bookingService.js";
+
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 /** POST /api/bookings/property */
 export const createPropertyBookingHandler = asyncHandler(async (req, res) => {
@@ -378,3 +381,4 @@ export const checkReviewEligibility = asyncHandler(async (req, res) => {
     bookingId: eligibleBooking._id,
   });
 });
+

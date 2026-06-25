@@ -14,7 +14,6 @@ import {
   createPropertyBookingHandler,
   createServiceBookingHandler,
   checkReviewEligibility,
-  retryBookingPaymentHandler,
 } from "../controllers/bookingController.js";
 import { protect } from "../middleware/authMiddleware.js";
 import { restrictTo } from "../middleware/roleMiddleware.js";
